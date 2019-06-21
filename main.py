@@ -53,8 +53,6 @@ args = parser.parse_args()
 
 
 def main(_):
-    a = device_lib.list_local_devices()
-    print(a)
     if not os.path.exists(args.checkpoint_dir):
         os.makedirs(args.checkpoint_dir)
     if not os.path.exists(args.sample_dir):
@@ -62,10 +60,10 @@ def main(_):
     if not os.path.exists(args.test_dir):
         os.makedirs(args.test_dir)
 
-    tfconfig = tf.ConfigProto(allow_soft_placement=True)
-    tfconfig.gpu_options.allow_growth = True
-    with tf.Session(config=tfconfig) as sess:
-
+    # tfconfig = tf.ConfigProto(allow_soft_placement=True)
+    # tfconfig.gpu_options.allow_growth = True
+    # with tf.Session(config=tfconfig) as sess:
+    with tf.Session() as sess:
         if args.type == 'cyclegan':
             model = cyclegan(sess, args)
             model.train(args) if args.phase == 'train' else model.test(args)
