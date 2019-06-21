@@ -5,7 +5,7 @@ from shutil import copyfile
 from glob import glob
 import tensorflow as tf
 import numpy as np
-import config
+# import config
 from collections import namedtuple
 from module import *
 from utils import *
