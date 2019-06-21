@@ -8,6 +8,9 @@ tf.set_random_seed(19)
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
+from tensorflow.python.client import device_lib
+
+
 parser = argparse.ArgumentParser(description='')
 parser.add_argument('--dataset_dir', dest='dataset_dir', default='JAZZ2ROCK', help='path of the dataset')
 parser.add_argument('--dataset_A_dir', dest='dataset_A_dir', default='JC_J', help='path of the dataset of domain A')
@@ -50,6 +53,8 @@ args = parser.parse_args()
 
 
 def main(_):
+    a = device_lib.list_local_devices()
+    print(a)
     if not os.path.exists(args.checkpoint_dir):
         os.makedirs(args.checkpoint_dir)
     if not os.path.exists(args.sample_dir):
