@@ -12,6 +12,7 @@ from utils import *
 from ops import *
 from metrics import *
 # os.environ["CUDA_VISIBLE_DEVICES"] = os.environ['SGE_GPU']
+os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
 
 class cyclegan(object):
