@@ -6,7 +6,9 @@ from pypianoroll import Multitrack, Track
 import pretty_midi
 import shutil
 
-ROOT_PATH = '/Users/sumuzhao/Downloads/'
+# ROOT_PATH = '/Users/sumuzhao/Downloads/'
+
+ROOT_PATH = 'D:/dataSets/music/Datasets'
 converter_path = os.path.join(ROOT_PATH, 'MIDI/pop/pop_test/converter')
 cleaner_path = os.path.join(ROOT_PATH, 'MIDI/pop/pop_test/cleaner')
 

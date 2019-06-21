@@ -11,7 +11,8 @@ from pypianoroll import Multitrack, Track
 import librosa.display
 from utils import *
 
-ROOT_PATH = '/Users/sumuzhao/Downloads/'
+ROOT_PATH = 'D:/dataSets/music/Datasets'
+    # '/Users/sumuzhao/Downloads/'
 test_ratio = 0.1
 LAST_BAR_MODE = 'remove'
 
