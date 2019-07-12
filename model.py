@@ -400,6 +400,7 @@ class cyclegan(object):
 
         if self.load(args.checkpoint_dir):
             print(" [*] Load SUCCESS")
+            print(self.now_datetime)
         else:
             print(" [!] Load failed...")
 
