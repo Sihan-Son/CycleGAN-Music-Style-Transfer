@@ -403,6 +403,8 @@ class cyclegan(object):
             print(self.now_datetime)
         else:
             print(" [!] Load failed...")
+            print(self.now_datetime)
+
 
         if args.which_direction == 'AtoB':
             out_origin, out_var, out_var_cycle, in_var = (self.test_A_binary, self.testB_binary, self.testA__binary,
