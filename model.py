@@ -53,7 +53,7 @@ class cyclegan(object):
 
         self._build_model()
         self.saver = tf.train.Saver(max_to_keep=30)
-        self.now_datetime = '2019-07-11' # get_now_datetime()
+        self.now_datetime = '2019-07-02' # get_now_datetime()
         self.pool = ImagePool(args.max_size)
 
     def _build_model(self):
