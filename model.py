@@ -344,6 +344,7 @@ class cyclegan(object):
         # model_dir = "{}2{}_{}_{}_{}".format(self.dataset_A_dir, self.dataset_B_dir, '2018-06-14', self.model,
         #                                     self.sigma_d)
         checkpoint_dir = os.path.join(checkpoint_dir, model_dir)
+        print(checkpoint_dir)
 
         ckpt = tf.train.get_checkpoint_state(checkpoint_dir)
         if ckpt and ckpt.model_checkpoint_path:
